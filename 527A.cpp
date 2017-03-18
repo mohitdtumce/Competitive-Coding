@@ -1,27 +1,18 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
+
 int main(){
-	int n1,n2;
-	cin>>n1>>n2;
-	int k,m;
-	cin>>k>>m;
-	long a[n1],b[n2],d1=0,d2=0;
-	for(int i=0;i<n1;i++){
-		cin>>a[i];
-		if(i==(k-1)){
-			d1=a[i];
+	long long a,b,count=0;
+	cin>>a>>b;
+	
+	while(a != b && b && a){
+		if(a > b){
+			count += a/b;
+			a = a%b; 
+		}else{
+			count += b/a;
+			b = b%a;
 		}
 	}
-	for(int i=0;i<n2;i++){
-		cin>>b[i];
-		if(i==(n2-m)){
-			d2=b[i];
-		}
-	}
-	if(d1<d2){
-		cout<<"YES";
-	}else{
-		cout<<"NO";
-	}
-	return 0;
+	cout<<count;
 }
