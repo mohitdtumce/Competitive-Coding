@@ -1,25 +1,33 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <climits>
+#include <map>
 using namespace std;
 
 int main(){
-	long n,i,temp;
-	cin>>n;
-	vector<long>vec;
-	for(i=0;i<n;i++){
+	ios_base::sync_with_stdio(0);
+	int n,temp,mn = INT_MAX, mx = INT_MIN;
+	long maxDiff = 0,value = 0;
+	cin>> n;
+	map<long,long> mymap;
+	for(int i=0;i<n;i++){
 		cin>>temp;
-		vec.push_back(temp);
+		mymap[temp]++;
+		if(temp < mn){
+			mn = temp;
+		}
+		if(temp > mx){
+			mx = temp;
+		}
+		if(mx-mn>mxdiff){
+			mxdiff=mx-mn;
 	}
-	sort(vec.begin(),vec.end());
-	long mini=1,maxi=1;
-	for(i=1;i<n && vec[0] == vec[i];i++){
-		mini++;
+	if(mx == mn){
+		n%2==0 ? (value = (n/2)*(n-1)):(value = ((n-1)/2)*(n));
+	}else{
+		value = mymap[mx]*mymap[mn];
 	}
-	for(i=n-2; i>=0 && vec[n-1] == vec[i];i--){
-		maxi++;
-	}
-	long long val = mini*maxi;
-	cout<<(vec[n-1]-vec[0])<<" "<<val<<"\n";
+	cout<<maxDiff<<" "<<value<<endl;
 	return 0;
 }
