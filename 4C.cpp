@@ -1,36 +1,26 @@
-#include <iostream>
-#include <algorithm>
-#include <cmath>
-#include <map>
+#include <bits/stdc++.h>
 using namespace std;
-string num2string(int num){
-	int temp;
+
+int main()
+{
+	map<string, int> mymap;
+	map<string, int>::iterator itr;
 	string str;
-	while(num){
-		temp = num % 10;
-		str = char(temp+'0')+str;
-		num /= 10;
-	}
-	return str;
-}
-int main(){
-	map<string,int> mymap;
-	map<string,int>::iterator itr;
 	int n;
 	cin>>n;
-	string str;
-	for(int i=0;i<n;i++){
+	while(n--)
+	{
 		cin>>str;
-		if(mymap.count(str)==0){
-			mymap.insert(pair<string,int>(str,0));
+		itr = mymap.find(str);
+		if(itr == mymap.end())
+		{
+			mymap[str] = 0;
 			cout<<"OK\n";
-		}else{
-			itr = mymap.find(str);
+		}
+		else
+		{
 			itr->second++;
-			string temp = num2string(itr->second);
-			str+=temp;
-			cout<<str<<endl;
+			cout<<str+ to_string(itr->second)<<"\n";
 		}
 	}
-	return 0;
 }
