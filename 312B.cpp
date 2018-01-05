@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main() {
-	double a,b,c,d;
+int main(int argc, char const *argv[])
+{
+	double a, b, c, d;
 	cin>>a>>b>>c>>d;
-	double p=(1-(a/b));
-	double q=(1-(c/d));
-	printf("%0.8lf",((1-p)/(1-p*q)));
+	double ans = (a*d)/(b*c + a*d - a*c);
+	cout<<ans;
 	return 0;
 }

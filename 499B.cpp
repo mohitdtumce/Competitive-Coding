@@ -1,53 +1,33 @@
 #include <iostream>
-#include<string>
+#include <string>
+#include <unordered_map>
+#include <algorithm>
 using namespace std;
 
-class combo{
-private:
-    string s1;
-    string s2;
-    //int data;
-public:
-    void init(){
-        cin>>s1;
-        cin>>s2;
-        //data = s1.length()>=s2.length()?s1.length():s2.length();
-    }
-    string getfirst(){
-        return s1;
-    }
-
-    string val(){
-        if(s1.length() <= s2.length()){
-            return s1;
-        }else{
-            return s2;
-        }
-    }
-
-};
-
-int main()
+int main(int argc, char const *argv[])
 {
-    //cout << "Hello World!" << endl;
-    int n,m;
-    cin>>n>>m;
-    combo var[m];
-    for(int i=0;i<m;i++){
-        var[i].init();
-    }
-    string s;
-    for(int i=0;i<n;i++){
-        cin>>s;
-        for(int j=0;j<m;j++){
-            if(s == var[j].getfirst()){
-                s = var[j].val();
-                cout<<s;
-                if(j != (m)){
-                    cout<<" ";
-                }
-            }
-        }
-    }
-    return 0;
+	int n, m;
+	cin>>n>>m;
+	unordered_map<string, string> mymap;
+	string str1, str2;
+	for (int i = 0; i < m; ++i)
+	{
+		cin>>str1>>str2;
+		if(str1.size() <= str2.size())
+		{
+			mymap[str1] = str1;
+		}
+		else
+		{
+			mymap[str1] = str2;
+		}
+	}
+	string test, res = "";
+	for (int i = 0; i < n; ++i)
+	{
+		cin>>test;
+		res += (mymap[test] + " ");
+	}
+	cout<<res;
+	return 0;
 }
