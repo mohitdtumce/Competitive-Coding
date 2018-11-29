@@ -1,5 +1,0 @@
-Scrum 1015 2400 7 Nitish
-OKRReview 1500 1700 4 Kanhaiya
-DesignReview 1700 1800 6 Iravati
-DesignDiscussion 1145 1330 6 Amit
-TeamMeeting 1730 1800 4 John
