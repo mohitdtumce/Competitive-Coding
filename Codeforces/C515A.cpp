@@ -1,25 +1,22 @@
-#include<iostream>
-#include<math.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-	long int a,b,s;
+int main() {
+	long long a, b, s;
 	cin>>a>>b>>s;
 	a = abs(a);
 	b = abs(b);
-	if((a+b)%2==0){
-		if(s >= (a+b) && s%2==0){
-			std::cout<<"Yes \n";
-		}else{
-			std::cout<<"No\n";
-		}
-	}else{
-		if(s >= (a+b) && s%2==1){
-			std::cout<<"Yes\n";
-		}else{
-			std::cout<<"No\n";
+	s -= (a+b);
+	if (s < 0) {
+		cout<<"No";
+	} else if (s == 0) {
+		cout<<"Yes";
+	} else {
+		if (s % 2 == 0) {
+			cout<<"Yes";
+		} else {
+			cout<<"No";
 		}
 	}
 	return 0;
-	
 }
