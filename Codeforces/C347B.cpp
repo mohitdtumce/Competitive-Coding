@@ -6,22 +6,28 @@ int main()
     int n;
     cin >> n;
     vector<int> vec(n);
-    int res = 0;
+    int count = 0;
     for (int i = 0; i < n; i++)
     {
         cin >> vec[i];
         if (i == vec[i])
-            res++;
+            count++;
     }
-    int maxInc = 1;
+
+    int maxInc = 0;
+
     for (int i = 0; i < n; i++)
     {
-        if (vec[i] == vec[vec[i]])
+        if (i != vec[i] && vec[i] != vec[vec[i]] && i == vec[vec[i]])
         {
             maxInc = 2;
             break;
         }
+        else if (i != vec[i] || vec[i] != vec[vec[i]] && i == vec[vec[i]])
+        {
+            maxInc = max(maxInc, 1);
+        }
     }
-    cout << res + maxInc;
+    cout << count + maxInc;
     return 0;
 }
