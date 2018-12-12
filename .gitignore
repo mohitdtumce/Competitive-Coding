@@ -29,11 +29,11 @@
 *.out
 *.app
 
-
-input.txt
+*.txt
 temp.cpp
 temp.java
 temp.py
 test.cpp
 test.java
 test.py
+Codeforces/input.txt
