@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class mohit_sharma {
+public class C520B {
     public static void main(String[] args) {
      Scanner input = new Scanner(System.in);
      int n;

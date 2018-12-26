@@ -1,5 +1,5 @@
 import java.util.*;
-public class Set{
+public class C459A {
 	public static void main(String[] args){
 		
 		Scanner input = new Scanner(System.in);

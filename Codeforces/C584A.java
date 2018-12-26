@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class mohit_sharma{
+public class C584A {
 	public static void main(String[] args){
 		
 		int n,t;

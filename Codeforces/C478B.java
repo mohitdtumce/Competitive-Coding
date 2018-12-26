@@ -1,5 +1,5 @@
 import java.util.*;
-public class Sample {
+public class C478B {
 
 	public static void main(String[] args) {
 		Scanner mohit = new Scanner(System.in);

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class mohit_sharma{
+public class C546A {
 	public static void main(String[] args){
 	
 		Scanner input = new Scanner(System.in);

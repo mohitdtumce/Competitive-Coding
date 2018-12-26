@@ -1,5 +1,5 @@
 import java.util.*;
-public class Sample {
+public class C467B {
 
 	public static void main(String[] args) {
 		int n,m,k,friend=0;

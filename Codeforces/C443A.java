@@ -1,5 +1,5 @@
 import java.util.*;
-public class mohit_sharma{
+public class C443A {
 	public static void main(String[] args){
 		HashSet<Character> test = new HashSet<>();
 		Scanner input = new Scanner(System.in);
