@@ -10,6 +10,7 @@ public class C228A {
 			test.add(input.nextLong());
 		}
 		System.out.print(4- test.size());
+		input.close();
 		
 	}
 }

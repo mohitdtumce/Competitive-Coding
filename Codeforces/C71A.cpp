@@ -1,19 +1,23 @@
-#include<iostream>
-#include<string.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     int test;
-    cin>>test;
+    cin >> test;
 
-    while(test--){
+    while (test--)
+    {
         string testcase;
-        cin>>testcase;
+        cin >> testcase;
         int length = testcase.length();
-        if(length>10){
-            cout<<testcase[0]<<(length-2)%100<<testcase[length-1]<<endl;
-        }else{
-            cout<<testcase<<endl;
+        if (length > 10)
+        {
+            cout << testcase[0] << (length - 2) % 100 << testcase[length - 1] << endl;
+        }
+        else
+        {
+            cout << testcase << endl;
         }
     }
     return 0;

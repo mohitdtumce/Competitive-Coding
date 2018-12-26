@@ -16,6 +16,7 @@ public class C766B {
                 res = true; break;
             }
         }
+        in.close();
 
         if(res) {
             System.out.print("YES");

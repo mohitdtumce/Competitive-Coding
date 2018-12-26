@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Calendar;
 public class C734B {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -13,5 +12,6 @@ public class C734B {
         num32 = Math.min(k2, k3);
         long res = (long)(256*num256) + (long)(32*num32); 
         System.out.print(res);
+        in.close();
     }  
 }

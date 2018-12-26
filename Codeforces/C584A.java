@@ -10,6 +10,7 @@ public class C584A {
 		
 		if(n ==1 && t == 10){
 			System.out.print(-1);
+			input.close();
 			return;
 		}
 		List<Integer> vec = new ArrayList<>();
@@ -28,5 +29,6 @@ public class C584A {
 		for(int  i=0;i< n;i++){
 			System.out.print(vec.get(i));
 		}
+		input.close();
 	}
 }

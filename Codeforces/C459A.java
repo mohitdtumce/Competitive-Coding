@@ -31,8 +31,10 @@ public class C459A {
 			y4 = y1;
 		}else{
 			System.out.print(-1);
+			input.close();
 			return;
 		}
 		System.out.print(x3 + " " + y3 + " " + x4 +" "+y4);
+		input.close();
 	}
 }

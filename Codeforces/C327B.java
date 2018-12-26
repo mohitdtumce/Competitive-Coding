@@ -1,5 +1,3 @@
-import java.lang.*; 
-import java.io.*; 
 import java.util.*; 
 
 public class C327B {
@@ -12,5 +10,6 @@ public class C327B {
             counter += 1;
             n -= 1;
         }
+        in.close();
     }
 }

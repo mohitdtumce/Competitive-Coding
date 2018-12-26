@@ -1,12 +1,9 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Vector;
 public class C732B {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int k = in.nextInt();
-        int a;
         int [] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
@@ -22,5 +19,6 @@ public class C732B {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
+        in.close();
     }
 }

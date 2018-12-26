@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.* ;
 public class C141A {
 	public static void main(String[] args){
 		
@@ -10,6 +9,7 @@ public class C141A {
 		test3 = input.next();
 		if(test1.length() + test2.length() != test3.length()){
 			System.out.println("NO");
+			input.close();
 			return;
 		}else{
 			test1 = test1 + test2;
@@ -21,10 +21,12 @@ public class C141A {
 			for(int i=0; i< test1toarray.length;i++){
 				if(test1toarray[i] != test3toarray[i]){
 					System.out.println("NO");
+					input.close();
 					return;
 				}
 			}
 			System.out.println("YES");
 		}
+		input.close();
 	}
 }

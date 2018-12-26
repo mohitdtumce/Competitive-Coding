@@ -41,5 +41,6 @@ public class C492C {
             }
             System.out.print(res);
         }
+        in.close();
     }
 }

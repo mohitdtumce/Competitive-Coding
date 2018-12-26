@@ -15,5 +15,6 @@ public class C479A {
 		test.add(a*b*c);
 		Collections.sort(test);
 		System.out.println(test.get(test.size()-1));
+		input.close();
 	}
 }

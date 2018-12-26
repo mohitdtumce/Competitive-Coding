@@ -1,5 +1,5 @@
 import java.util.*;
-public class test {
+public class C492B {
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		Scanner mohit = new Scanner(System.in);
@@ -7,7 +7,7 @@ public class test {
 		long l,temp;
 		n = mohit.nextInt();
 		l = mohit.nextLong();
-		ArrayList al = new ArrayList();
+		ArrayList<Long> al = new ArrayList<Long>();
 		for(int i=0;i< n;i++){
 			temp = mohit.nextLong();
 			al.add(temp);

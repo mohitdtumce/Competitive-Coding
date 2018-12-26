@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Collections;
 import java.util.Arrays;
 public class C462B {
     public static void main(String[] args) {
@@ -26,5 +25,6 @@ public class C462B {
             }
         }
         System.out.print(res);
+        in.close();
     }
 }

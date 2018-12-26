@@ -13,6 +13,6 @@ public class C451A{
 	    if(k%2 == 1){
 	    	System.out.println("Akshat");
 	    }
-
+		input.close();
 	}
 }

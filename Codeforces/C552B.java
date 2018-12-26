@@ -1,5 +1,3 @@
-import java.lang.*; 
-import java.io.*; 
 import java.util.*; 
 
 public class C552B {
@@ -16,6 +14,7 @@ public class C552B {
         n -= base;
         res += (n*digit);
         System.out.print(res);
+        in.close();
     }
 
     public static int digitCounter(long num) {

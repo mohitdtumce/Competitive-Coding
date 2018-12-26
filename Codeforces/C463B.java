@@ -1,5 +1,3 @@
-import java.lang.*; 
-import java.io.*; 
 import java.util.*; 
 
 public class C463B {
@@ -24,5 +22,6 @@ public class C463B {
         }
 
         System.out.print(expenditure);
+        in.close();
     }
 }

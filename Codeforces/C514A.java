@@ -16,5 +16,6 @@ public class C514A {
         }
         num.toString();
         System.out.print(num);
+        in.close();
     }
 }

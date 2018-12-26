@@ -4,23 +4,29 @@
 using namespace std;
 int main()
 {
-    string first,second;
-    cin>>first;
-    cin>>second;
-    int flag =0;
-    for(int i=0;i<first.length();i++){
-        if(toupper(first[i])== toupper(second[i])){
+    string first, second;
+    cin >> first;
+    cin >> second;
+    int flag = 0;
+    for (int i = 0; i < first.length(); i++)
+    {
+        if (toupper(first[i]) == toupper(second[i]))
+        {
             continue;
-        }else if(toupper(first[i]) >= toupper(second[i])){
+        }
+        else if (toupper(first[i]) >= toupper(second[i]))
+        {
             flag++;
             break;
-        }else{
+        }
+        else
+        {
             flag--;
             break;
         }
     }
 
-      cout<<flag;
+    cout << flag;
 
     return 0;
 }

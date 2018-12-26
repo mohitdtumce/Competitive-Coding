@@ -17,6 +17,6 @@ public class C313A {
 			a = -a;
 			System.out.print(a);
 		}
-		
+		input.close();	
 	}
 }

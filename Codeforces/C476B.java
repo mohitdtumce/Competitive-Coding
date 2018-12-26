@@ -1,5 +1,3 @@
-import java.lang.*; 
-import java.io.*; 
 import java.util.*; 
 
 public class C476B {
@@ -36,5 +34,6 @@ public class C476B {
             }
         }
         System.out.print(res);
+        in.close();
     }
 }

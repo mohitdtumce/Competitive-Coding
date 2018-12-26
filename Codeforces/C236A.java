@@ -13,5 +13,6 @@ public class C236A {
 		}else if(test.size() % 2 == 1){
 			System.out.print("IGNORE HIM!");
 		}
+		input.close();
 	}
 }

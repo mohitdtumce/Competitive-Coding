@@ -23,5 +23,6 @@ public class C731B {
         } else {
             System.out.print("NO");
         }
+        in.close();
     }
 }

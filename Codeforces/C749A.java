@@ -16,5 +16,6 @@ public class C749A {
             }
             System.out.print("3");
         }
+        in.close();
     }
 }

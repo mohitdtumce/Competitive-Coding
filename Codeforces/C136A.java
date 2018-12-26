@@ -12,6 +12,7 @@ public class C136A {
 		}
 		
 		for(int key: test.keySet())
-            System.out.print(test.get(key)+" ");
+			System.out.print(test.get(key)+" ");
+		mohit.close();
 	}
 }

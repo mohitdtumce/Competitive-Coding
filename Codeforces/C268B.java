@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Calendar;
 public class C268B {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -9,5 +8,6 @@ public class C268B {
             counter += ((n - i) + i*(n - i - 1));
         }
         System.out.print(counter);
+        in.close();
     }
 }

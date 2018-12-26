@@ -17,7 +17,7 @@ public class C545D {
                 counter += person[i];
             }
         }
-        
+        in.close();
         System.out.print(flag);
     }
 }

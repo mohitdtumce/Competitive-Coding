@@ -1,7 +1,6 @@
 // incomplete question
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Calendar;
 public class C538B {
     public static void main(String[] args) {
         int [] quasiBinary = new int [] {1, 10, 11, 100, 101, 110, 111, 1000, 
@@ -28,5 +27,6 @@ public class C538B {
         for(int i = 0; i < res.size(); i++) {
             System.out.print(res.get(i) + " ");
         }
+        in.close();
     }
 }

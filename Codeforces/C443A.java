@@ -10,6 +10,6 @@ public class C443A {
 				test.add(given.charAt(i));
 		}
 		System.out.print(test.size());
-	
+		input.close();
 	}
 }

@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Calendar;
 public class C570B {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -19,5 +18,6 @@ public class C570B {
                 System.out.print(Math.min(m + 1, n));
             }
         }
+        in.close();
     }
 }

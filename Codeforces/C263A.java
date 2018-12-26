@@ -13,5 +13,6 @@ public class C263A {
 			}
 		}
 		System.out.print(Math.abs(p-3)+ Math.abs(q-3));
+		input.close();
 	}
 }

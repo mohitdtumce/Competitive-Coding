@@ -30,5 +30,6 @@ public class C735B{
         sum1 /= (Math.min(n1, n2));
         sum2 /= (Math.max(n1, n2));
         System.out.printf("%.8f", (sum1 + sum2));
+        in.close();
     }
 }

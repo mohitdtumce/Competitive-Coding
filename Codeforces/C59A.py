@@ -9,8 +9,8 @@ for i in n:
 if(low >= high):
 	for i in range(len(n)):
 		n[i] = n[i].lower()
-		print(n[i], end = '')
+		print(n[i], end='')
 else:
 	for i in range(len(n)):
 		n[i] = n[i].upper()
-		print(n[i], end = '')
+		print(n[i], end='')

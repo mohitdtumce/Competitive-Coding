@@ -6,5 +6,6 @@ public class C519C {
         long np = in.nextLong();
         
         System.out.print(Math.min((ep + np)/3, Math.min(ep, np)));
+        in.close();
     }
 }

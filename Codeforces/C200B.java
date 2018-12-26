@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Calendar;
 public class C200B {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -12,5 +11,6 @@ public class C200B {
         }
         res /= n;
         System.out.print(res);
+        in.close();
     }
 }
