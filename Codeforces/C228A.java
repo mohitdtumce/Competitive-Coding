@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class mohit_sharma{
+public class C228A {
 	public static void main(String[] args){
 	
 		Set<Long> test = new HashSet<>();

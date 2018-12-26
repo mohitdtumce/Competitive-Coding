@@ -1,5 +1,5 @@
 import java.util.*;
-public class Sample {
+public class C339B {
 
 	public static void main(String[] args) {
 		int n,m;

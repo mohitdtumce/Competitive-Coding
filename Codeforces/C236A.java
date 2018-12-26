@@ -1,5 +1,5 @@
 import java.util.*;
-public class mohit_sharma{
+public class C236A {
 	public static void main(String[] args){
 		String name;
 		Scanner input = new Scanner(System.in);

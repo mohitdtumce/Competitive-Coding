@@ -1,6 +1,6 @@
 import java.util.*;
 import java.lang.* ;
-public class Set{
+public class C141A {
 	public static void main(String[] args){
 		
 		String test1,test2,test3;

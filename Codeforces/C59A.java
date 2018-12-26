@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Set{
+public class C59A {
 	public static void main(String[] args){
 		
 		String test1;

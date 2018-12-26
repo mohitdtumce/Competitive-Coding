@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class mohit_sharma{
+public class C136A {
 	public static void main(String[] args){
 		TreeMap<Integer,Integer> test = new TreeMap<>();
 		Scanner mohit = new Scanner(System.in);
