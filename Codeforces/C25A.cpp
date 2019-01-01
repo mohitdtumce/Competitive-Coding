@@ -1,44 +1,28 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
     int n;
-    cin >> n;
-    int count0 = 0, count1 = 0;
-    int array[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> array[i];
-        if (array[i] % 2 == 0)
-        {
-            count0++;
-        }
-        else
-        {
-            count1++;
+    cin>>n;
+    int oddCount = 0, evenCount = 0, oddIndex, evenIndex, temp;
+    for (int i = 0; i < n; i++) {
+        cin>>temp;
+        if (temp & 1) {
+            oddCount++;
+            oddIndex = i+1;
+        } else {
+            evenCount++;
+            evenIndex = i+1;
         }
     }
-    if (count0 == 1)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            if (array[i] % 2 == 0)
-            {
-                cout << i + 1 << "\n";
-            }
-        }
+
+    if (oddCount == 1) {
+        cout<<oddIndex;
     }
-    else if (count1 == 1)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            if (array[i] % 2 == 1)
-            {
-                cout << i + 1 << "\n";
-            }
-        }
+
+    if (evenCount == 1) {
+        cout<<evenIndex;
     }
     return 0;
 }
