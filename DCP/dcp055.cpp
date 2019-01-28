@@ -17,7 +17,7 @@ using namespace std;
 class Shortly
 {
     unordered_map<string, string> urlMapper;
-    unordered_set<string> usedAlias;
+    unordered_map<string, string> aliasMapper;
 
     string computeAlias()
     {
@@ -36,8 +36,9 @@ class Shortly
             do
             {
                 short_ly = computeAlias();
-            } while (this->usedAlias.find(short_ly) != this->usedAlias.end());
-            urlMapper[url] = short_ly;
+            } while (this->aliasMapper.find(short_ly) != this->aliasMapper.end());
+            this->urlMapper[url] = short_ly;
+            this->aliasMapper[short_ly] = url;
             return short_ly;
         }
         else
@@ -46,15 +47,15 @@ class Shortly
         }
     }
 
-    string restore(string url)
+    string restore(string short_ly)
     {
-        if (this->urlMapper.find(url) == this->urlMapper.end())
+        if (this->urlMapper.find(short_ly) == this->urlMapper.end())
         {
             throw "URL not found";
         }
         else
         {
-            return urlMapper[url];
+            return urlMapper[short_ly];
         }
     }
 };
@@ -63,9 +64,9 @@ int main()
 {
     Shortly shortly;
     string short_ly = shortly.shorten("https://www.google.com");
-    cout<<short_ly<<"\n";
+    cout << short_ly << "\n";
     short_ly = shortly.shorten("https://www.facebook.com");
-    cout<<short_ly<<"\n";
+    cout << short_ly << "\n";
     short_ly = shortly.shorten("https://www.youtube.com");
-    cout<<short_ly<<"\n";
+    cout << short_ly << "\n";
 }
