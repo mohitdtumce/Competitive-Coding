@@ -49,13 +49,13 @@ class Shortly
 
     string restore(string short_ly)
     {
-        if (this->urlMapper.find(short_ly) == this->urlMapper.end())
+        if (this->aliasMapper.find(short_ly) == this->aliasMapper.end())
         {
             throw "URL not found";
         }
         else
         {
-            return urlMapper[short_ly];
+            return aliasMapper[short_ly];
         }
     }
 };
