@@ -63,10 +63,26 @@ class Shortly
 int main()
 {
     Shortly shortly;
-    string short_ly = shortly.shorten("https://www.google.com");
-    cout << short_ly << "\n";
-    short_ly = shortly.shorten("https://www.facebook.com");
-    cout << short_ly << "\n";
-    short_ly = shortly.shorten("https://www.youtube.com");
-    cout << short_ly << "\n";
+
+    try
+    {
+        string short_ly = shortly.shorten("https://www.google.com");
+        cout << short_ly << " ";
+        cout << shortly.restore(short_ly) << "\n";
+        short_ly = shortly.shorten("https://www.facebook.com");
+        cout << short_ly << " ";
+        cout << shortly.restore(short_ly) << "\n";
+        short_ly = shortly.shorten("https://www.youtube.com");
+        cout << short_ly << " ";
+        cout << shortly.restore(short_ly) << "\n";
+        cout << shortly.restore("abcdef") << "\n";
+    }
+    catch (const char *err)
+    {
+        cout << err << "\n";
+    }
+    catch (...)
+    {
+        cout << "Unknown Error";
+    }
 }
