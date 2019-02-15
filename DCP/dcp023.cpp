@@ -23,46 +23,59 @@ because there is a wall everywhere else on the second row.
 #include <bits/stdc++.h>
 using namespace std;
 
-int xmoves[4] = {1, -1, 0, 0};
-int ymoves[4] = {0, 0, 1, -1};
-bool isSafe(const vector<vector<bool>> &grid, int r, int c)
-{
-    int Row = grid.size();
-    int Col = grid[0].size();
-    return (r >= 0 && r < Row && c >= 0 && c < Col && !grid[r][c]);
-}
+#define VALID_MOVES_COUNT 4
 
-int countPathHelper(const vector<vector<bool>> &grid, vector<vector<bool>> &visited, 
-                    pair<int, int> curr, pair<int, int> destination)
+vector<int> xMoves = {-1, 0, 1, 0};
+vector<int> yMoves = {0, 1, 0, -1};
+
+bool IsSafe(const vector<vector<bool>> &grid, vector<vector<bool>> &visited,
+            int x, int y, const int Row, const int Col)
 {
-    if (curr == destination)
-        return 1;
+    return (x >= 0 && x < Row && y >= 0 && y < Col && !visited[x][y] && !grid[x][y]);
+}
+bool countStepsHelper(const vector<vector<bool>> &grid, vector<vector<bool>> &visited,
+                      int sx, int sy, const int dx, const int dy, const int Row,
+                      const int Col, int steps, int &minSteps)
+{
+    if (sx == dx && sy == dy)
+    {
+        minSteps = min(minSteps, steps);
+        return true;
+    }
     else
     {
-        int sum = 0, nextx, nexty;
-        for (int i = 0; i < 4; i++)
+        if (IsSafe(grid, visited, sx, sy, Row, Col))
         {
-            nextx = curr.first + xmoves[i];
-            nexty = curr.second + ymoves[i];
-            if (isSafe(grid, nextx, nexty) && !visited[nextx][nexty])
+            bool ans = false;
+            visited[sx][sy] = true;
+            for (int i = 0; i < VALID_MOVES_COUNT; i++)
             {
-                visited[nextx][nexty] = true;
-                sum += countPathHelper(grid, visited, make_pair(nextx, nexty), destination);
-                visited[nextx][nexty] = false;
+                ans = ans || countStepsHelper(grid, visited, sx + xMoves[i], sy + yMoves[i],
+                                              dx, dy, Row, Col, steps + 1, minSteps);
             }
+            if (ans)
+                return true;
+            visited[sx][sy] = false;
         }
-        return sum;
+        return false;
     }
 }
 
-int countPath(const vector<vector<bool>> &grid, pair<int, int> source, 
-              pair<int, int> destination)
+int countSteps(const vector<vector<bool>> &grid, int sx, int sy, int dx, int dy)
 {
     int Row = grid.size();
     int Col = grid[0].size();
     vector<vector<bool>> visited(Row, vector<bool>(Col, false));
-    visited[source.first][source.second] = true;
-    return countPathHelper(grid, visited, source, destination);
+    int minSteps = INT_MAX;
+
+    if (countStepsHelper(grid, visited, sx, sy, dx, dy, Row, Col, 0, minSteps))
+    {
+        return minSteps;
+    }
+    else
+    {
+        return INT_MAX;
+    }
 }
 
 int main()
@@ -72,6 +85,6 @@ int main()
                                  {false, false, false, false},
                                  {false, false, false, false}};
 
-    cout << countPath(grid, make_pair(3, 0), make_pair(0, 0));
+    cout << countSteps(grid, 3, 0, 0, 0);
     return 0;
 }
